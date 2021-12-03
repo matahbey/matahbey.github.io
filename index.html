@@ -108,14 +108,20 @@ color: #000000;
 </FONT></I> 
 </FONT></I>
 <img src="https://github.com/matahbey/matahbey.github.io/blob/main/pikachuu.gif?raw=true"></img>
-<head>
-<script>
-window.onload = function() {
-  var context = new AudioContext();
-}
-</script>
-</head>
-<audio autoplay>
-      <source src="hellyes.mp3">
+<audio id="divAudio">
+   <source src="hellyes.mp3" type="audio/mp3">
 </audio>
+
+<script>
+   var vAudio = document.getElementById("divAudio");
+   var hasInit = false;
+   function playMusic()
+   {
+      if(!hasInit)
+      {
+          hasInit = true;
+          vAudio.play();
+      }
+   }
+</script>
 </html>
