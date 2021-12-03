@@ -108,9 +108,14 @@ color: #000000;
 </FONT></I> 
 </FONT></I>
 <img src="https://github.com/matahbey/matahbey.github.io/blob/main/pikachuu.gif?raw=true"></img>
-<iframe src="hellyes.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-</iframe> 
-<audio autoplay loop  id="playAudio">
-    <source src="hellyes.mp3">
+<head>
+<script>
+window.onload = function() {
+  var context = new AudioContext();
+}
+</script>
+</head>
+<audio autoplay>
+      <source src="hellyes.mp3">
 </audio>
 </html>
