@@ -1,0 +1,361 @@
+/*bg body: */
+body {
+  color: white;
+  background-color: #8c8c8c;
+  font-size: small;
+  font-family: Verdana
+}
+* {
+  box-sizing: border-box;
+  scrollbar-color: #b70000 #370000;
+  scrollbar-width: auto;
+}
+#wrapper {
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  border: 4px solid black;
+  border-radius: 7px;
+}
+@media only screen and (max-width: 800px) {
+  #wrapper
+  {
+    width: 100%;
+  }
+    #wrappery
+  {
+    width: 100%;
+  }
+  #buttons
+  {
+    width: 100%;
+  }
+  #text {
+    font-size: 150%;
+  }
+  #sorryQwQ {
+    width: 100%;
+  }
+  #texty {
+    font-size: 60%;
+  }
+  #update {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #wrapper
+  {
+    width: 80%;
+  }
+    #wrappery
+  {
+    width: 80%;
+  }
+    #buttons
+  {
+    width: 80%;
+  }
+    #text {
+    font-size: 120%;
+  }
+  #sorryQwQ {
+    width: 80%;
+  }
+  #update {
+    width: 80%;
+  }
+}
+@media only screen and (max-height: 800px) {
+  #gul
+  {
+    max-width: 30%;
+    max-height: 30%;
+  }
+  #logo
+  {
+    max-width: 30%;
+    max-height: 30%;
+  }
+  #gul3
+  {
+    max-width: 35%;
+    max-height: 10%;
+  }
+  #gul4
+  {
+    max-width: 30%;
+    max-height: 30%;
+  }
+}
+#kopf {
+  color: black;
+  background-color: #ff7575;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+background: rgb(255,133,133);
+background: -moz-linear-gradient(90deg, rgba(255,133,133,1) 0%, rgba(184,42,42,1) 50%, rgba(48,0,0,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(255,133,133,1) 0%, rgba(184,42,42,1) 50%, rgba(48,0,0,1) 100%);
+background: linear-gradient(90deg, rgba(255,133,133,1) 0%, rgba(184,42,42,1) 50%, rgba(48,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff8585",endColorstr="#300000",GradientType=1); 
+  border-bottom: 4px solid black;
+}
+#navi {
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  display: inline;
+}
+#navi li {
+  display: inline;
+  list-style-type: none;
+}
+#navi ul {
+  margin-bottom: 0;
+}
+h1 {
+  font-size: 180%;
+}
+h2 {
+  font-size: 110%;
+}
+address {
+  text-align: center;
+  font-size: 80%;
+  font-style: normal;
+  letter-spacing: 2px;
+  line-height: 1.5em;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #ff0000;
+}
+a:visited {
+  color: #c36e6e;
+}
+a:hover,
+a:focus {
+  border-bottom: 1px solid #ff5b5b;
+}
+#navi a {
+  color: black;
+}
+#fuss {
+  padding-top: 10px;
+  border-top: 1px solid #8c8c8c;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+#text {
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  width: 100%;
+  height: 100%;
+}
+form {
+  color: black;
+  background-color: #eeeeee;
+  width: 370px;
+  padding: 20px;
+  border: 1px solid #8c8c8c;
+}
+label {
+  color: black;
+  display: block;
+  cursor: pointer;
+}
+input#absender,
+textarea {
+  width: 300px;
+  border: 1px solid #8c8c8c;
+  margin-bottom: 1em;
+}
+textarea {
+  height: 7em;
+}
+input#absender:focus,
+textarea:focus {
+  background-color: #d9d9d9;
+}
+a img {
+  text-decoration: none;
+  border-bottom: 0px solid #ff5b5b;
+}
+.imglink {
+  text-decoration: none;
+}
+.imglink:hover,
+.imglink:focus {
+  border: 0px;
+}
+/*#sorryQwQ
+{
+  font-size: 70%;
+  margin-top: 3px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}*/
+#sorryQwQ
+{
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  border: 4px solid black;
+  border-radius: 7px;
+  height: 100%;
+  font-size: 150%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#vercontainer {
+  position: relative;
+  clear: both;
+}
+.verzeichnis {
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  border: 4px solid black;
+  border-radius: 7px;
+  font-size: 150%;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  width: 49%;
+  float: left;
+  height: 90%;
+}
+.status {
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: 10%;
+  margin-bottom: 10px;
+  margin-left: auto;
+  border: 4px solid black;
+  border-radius: 7px;
+  font-size: 150%;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  width: 30%;
+  float: right;
+  height: 120%;
+  }
+kopf {
+ position: relative;
+  top: 0;
+  left: 0;
+}
+#logo {
+width: 20px;
+height: auto;
+position: absolute;
+top: 30px;
+margin-left: 60%;
+margin-right: 40%;
+}
+#gul{
+    position:fixed;
+    bottom:0%;
+    margin-bottom: 0%;
+    margin-top: 100%;
+}
+#link {
+  text-align: left;
+}
+#link a {
+  text-decoration: none;
+}
+#link a:link {
+  color: #ffffff;
+}
+#link a:visited {
+  color: #ffffff;
+}
+#link a:hover,
+#link a:focus {
+  border-bottom: 0px solid #ffffff;
+}
+#gulbahce {
+  font-size: 140%;
+}
+#kopfy {
+  color: black;
+  background-color: #ff7575;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+ background: rgb(48,0,0);
+background: -moz-linear-gradient(90deg, rgba(48,0,0,1) 0%, rgba(158,70,70,1) 50%, rgba(255,133,133,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(48,0,0,1) 0%, rgba(158,70,70,1) 50%, rgba(255,133,133,1) 100%);
+background: linear-gradient(90deg, rgba(48,0,0,1) 0%, rgba(158,70,70,1) 50%, rgba(255,133,133,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#300000",endColorstr="#ff8585",GradientType=1); 
+}
+#wrappery {
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  border: 4px solid black;
+  border-radius: 7px;
+  font-size: 130%;
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+#texty {
+  text-align: right;
+}
+#gul3{
+    position:fixed;
+    bottom:0;
+    left: 76%;
+    margin-bottom: 0%;
+    margin-top: 100%;
+    max-width: 20%;
+    max-height: 45%;
+}
+#gul4{
+    position:fixed;
+}
+#update {
+  color: white;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  font-size: 70%;
+  letter-spacing: 0.7em;
+  white-space: nowrap;
+  overflow-x: auto;
+}
