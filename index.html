@@ -1,69 +1,84 @@
-<html><head><script
-  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-  crossorigin="anonymous"></script>
+<html><head>
         <meta charset="utf-8">
-<style>/*basic reset*/
-* {margin: 0; padding: 0;}
-/*adding a black bg to the body to make things clearer*/
-body {background: black;}
-canvas {display: block;}</style>
-</head>
-    <body>
-<script>var c = document.getElementById("c");
-var ctx = c.getContext("2d");
-
-//making the canvas full screen
-c.height = window.innerHeight;
-c.width = window.innerWidth;
-
-//chinese characters - taken from the unicode charset
-var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
-//converting the string into an array of single characters
-chinese = chinese.split("");
-
-var font_size = 10;
-var columns = c.width/font_size; //number of columns for the rain
-//an array of drops - one per column
-var drops = [];
-//x below is the x coordinate
-//1 = y co-ordinate of the drop(same for every drop initially)
-for(var x = 0; x < columns; x++)
-	drops[x] = 1; 
-
-//drawing the characters
-function draw()
-{
-	//Black BG for the canvas
-	//translucent BG to show trail
-	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-	ctx.fillRect(0, 0, c.width, c.height);
-	
-	ctx.fillStyle = "#0F0"; //green text
-	ctx.font = font_size + "px arial";
-	//looping over drops
-	for(var i = 0; i < drops.length; i++)
-	{
-		//a random chinese character to print
-		var text = chinese[Math.floor(Math.random()*chinese.length)];
-		//x = i*font_size, y = value of drops[i]*font_size
-		ctx.fillText(text, i*font_size, drops[i]*font_size);
-		
-		//sending the drop back to the top randomly after it has crossed the screen
-		//adding a randomness to the reset to make the drops scattered on the Y axis
-		if(drops[i]*font_size > c.height && Math.random() > 0.975)
-			drops[i] = 0;
-		
-		//incrementing Y coordinate
-		drops[i]++;
-	}
+<style>html {
+  background: black;
+  height: 100%;
+  overflow: hidden;
 }
 
-setInterval(draw, 33);
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
 
+/* Color of the text - you can change it as you need. */
+
+div {
+  color: red;
+}
 
 
+/* These are the properties applied to div that has the "innerDiv" class - you can change it as you need. */
+
+.innerDiv {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}</style>
+</head>
+    <body>
+<script>const canvas = document.getElementById('Matrix');
+const context = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const nums = '0123456789';
+
+const alphabet = katakana + latin + nums;
+
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+
+const rainDrops = [];
+
+for (let x = 0; x < columns; x++) {
+  rainDrops[x] = 1;
+}
+
+const draw = () => {
+  context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  context.fillStyle = '#0F0';
+  context.font = fontSize + 'px monospace';
+
+  for (let i = 0; i < rainDrops.length; i++) {
+    const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+    if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      rainDrops[i] = 0;
+    }
+    rainDrops[i]++;
+  }
+};
+
+setInterval(draw, 30);
 </script>
-<canvas id="c"></canvas>
+<canvas id="Matrix" style="width: 100%; height: 100%;"></canvas>
+<div id="wrapper">
+  <div class="innerDiv">
+    <span>This is an title example:</span>
+    <br/>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+</div>
 </body></html>
