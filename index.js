@@ -34,11 +34,11 @@ const draw = () => {
 		context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
 		
 		if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
-			ctx.font = "30px Arial";
-                        ctx.fillText("Hello World",10,50);
 			rainDrops[i] = 0;
         }
 		rainDrops[i]++;
+	        ctx.font = "30px Arial";
+                ctx.fillText("Hello World",10,50);
 	}
 };
 
