@@ -14,8 +14,8 @@ h1 {
 h1 span { 
     box-shadow: 10px 0 0px 0px #EDC330, -10px 0 0px 0px #EDC330;
     color: white;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 7.5%;
-    margin-right: 7.5%;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 400px);
+    background-color: green;
 }
