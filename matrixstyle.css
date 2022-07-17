@@ -19,3 +19,6 @@ h1 span {
     left: calc(50% - 400px);
     background-color: green;
 }
+canvas {
+    position: absolute;
+}
