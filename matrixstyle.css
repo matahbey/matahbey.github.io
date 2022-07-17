@@ -9,10 +9,8 @@ body {
     height: 100%;
 }
 h1 {
-    text-align: center;
-}
+    text-align: center;}
 h1 span { 
-    box-shadow: 10px 0 0px 0px #EDC330, -10px 0 0px 0px #EDC330;
     color: white;
     position: absolute;
     top: calc(50% - 200px);
@@ -20,5 +18,6 @@ h1 span {
     background-color: green;
 }
 canvas {
-    position: absolute;
+    position: relative;
+    z-index: 1;
 }
